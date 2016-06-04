@@ -1,0 +1,92 @@
+<div class="container  {{if reverseDirection 'reverse-direction'}} {{unless expand (if reversePosition ' reverse-position')}} {{if expand ' expand'}}">
+  {{x-toggle value=horizontal
+    onToggle=(mut horizontal)
+    onLabel='horizontal::true'
+    offLabel='Vertical::false'
+    showLabels=true
+  }}
+
+  {{x-toggle value=reverseDirection
+    onToggle=(mut reverseDirection)
+    onLabel='Reverse Direction on::true'
+    offLabel='Reverse Direction off::false'
+    showLabels=true
+  }}
+  {{x-toggle value=expand
+    onToggle=(mut expand)
+    onLabel='Expand::true'
+    offLabel='Expand::false'
+    showLabels=true
+  }}
+  {{#unless expand}}
+    {{x-toggle value=reversePosition
+      onToggle=(mut reversePosition)
+      onLabel='Reverse Position::true'
+      offLabel='Reverse Position::false'
+      showLabels=true
+    }}
+  {{/unless}}
+  {{x-toggle value=sync
+    onToggle=(mut sync)
+    onLabel='Sync::true'
+    offLabel='Sync::false'
+    showLabels=true
+  }}
+  <div class="presentation ">
+    <h3>The delay time</h3>
+    {{input type="number" value=delay}}
+  </div>
+
+
+  <div class="presentation full-width-half">
+    <p> The code of component</p>
+    <code>
+      \{{delay-input <br />
+          val=val <br />
+          {{#unless horizontal}}horizontal={{horizontal}}<br /> {{/unless}}
+          {{#if reverseDirection}}reverseDirection={{reverseDirection}}<br /> {{/if}}
+          {{#if reversePosition}}reversePosition={{reversePosition}}<br /> {{/if}}
+          {{#if expand}}expand={{expand}}<br /> {{/if}}
+          {{#if sync}}sync={{sync}}<br /> {{/if}}
+          delay={{delay}}<br />
+        }}<br />
+    </code>
+    {{delay-input val=val sync=sync horizontal=horizontal reversePosition=reversePosition reverseDirection=reverseDirection expand=expand delay=delay}}
+  </div>
+
+
+  <div class="presentation full-vertical">
+    <p> The code of component</p>
+    <code>
+      \{{delay-input <br />
+          val=val <br />
+          type="textarea"<br />
+          {{#unless horizontal}}horizontal={{horizontal}}<br /> {{/unless}}
+          {{#if reverseDirection}}reverseDirection={{reverseDirection}}<br /> {{/if}}
+          {{#if reversePosition}}reversePosition={{reversePosition}}<br /> {{/if}}
+          {{#if expand}}expand={{expand}}<br /> {{/if}}
+          delay={{delay}}<br />
+          {{#if sync}}sync={{sync}}<br /> {{/if}}
+        }}<br />
+    </code>
+    {{delay-input val=val delay=delay sync=sync type="textarea" horizontal=horizontal reversePosition=reversePosition reverseDirection=reverseDirection expand=expand placeholder="Write people, write!"}}
+  </div>
+
+
+  <div class="presentation">
+    <p> The delay block</p>
+    <code>
+      \{{#delay-block
+        {{#unless horizontal}}horizontal={{horizontal}}<br /> {{/unless}}
+        {{#if reverseDirection}}reverseDirection={{reverseDirection}}<br /> {{/if}}
+        {{#if reversePosition}}reversePosition={{reversePosition}}<br /> {{/if}}
+        {{#if expand}}expand={{expand}}<br /> {{/if}} val=val delay={{delay}} {{#if sync}}sync={{sync}}<br /> {{/if}}
+          as |value|}}<br />
+        \{{input value=value class="full-width"}}<br />
+      \{{/delay-block}}
+    </code>
+    {{#delay-block val=val delay=delay sync=sync horizontal=horizontal reversePosition=reversePosition reverseDirection=reverseDirection expand=expand  as |value|}}
+      {{input value=value class="full-width"}}
+    {{/delay-block}}
+  </div>
+</div>

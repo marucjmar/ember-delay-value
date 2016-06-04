@@ -1,0 +1,1 @@
+export { default } from 'ember-delay-input/components/delay-input';

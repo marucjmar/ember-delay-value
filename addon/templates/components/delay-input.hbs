@@ -1,0 +1,21 @@
+{{#if isTextarea}}
+  {{textarea
+    value=value
+    class=(concat 'delay-input ' inputClass)
+    placeholder=placeholder
+    disabled=disabled
+  }}
+
+{{else}}
+
+  {{input
+    type=type
+    value=value
+    class=(concat 'delay-input ' inputClass)
+    placeholder=placeholder
+    disabled=disabled
+  }}
+{{/if}}
+
+
+<span class="loader"></span>
