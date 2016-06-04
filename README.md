@@ -6,9 +6,13 @@ This addon is extend to [ember-debounced-input](https://www.npmjs.com/package/em
 ember install ember-delay-value
 ```
 
+##Demo
+[Demo page](http://marucjmar.github.io/ember-delay-value)
+
 ## Components
 The following components are available when you install ember-delay-value
 ![Demo](http://i.giphy.com/3oD3YNTofiARdX6IOk.gif)
+
 ## Basic
 
  ```
