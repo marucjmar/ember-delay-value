@@ -1,6 +1,6 @@
 {
   "name": "ember-delay-value",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The component, to change value after the delay time.",
   "directories": {
     "doc": "doc",
@@ -13,7 +13,7 @@
   },
   "repository": {
       "type" : "git",
-      "url" : "https://github.com/marucjmar/ember-cli-tinymce.git"
+      "url" : "https://github.com/marucjmar/ember-delay-value.git"
   },
   "engines": {
     "node": ">= 0.10.0"
@@ -42,7 +42,13 @@
     "ember-cli-toggle": "2.0.1"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "wait",
+    "debounced",
+    "value",
+    "delay",
+    "input",
+    "ember"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.6",
@@ -50,6 +56,6 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "demoURL": "http://marucjmar.github.io/ember-cli-tinymce"
+    "demoURL": "http://marucjmar.github.io/ember-delay-value"
   }
 }
