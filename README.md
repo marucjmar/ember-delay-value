@@ -44,7 +44,7 @@ The following components are available when you install ember-delay-value
 
 - `val`: The bound value to be debounced]
 - `delay`: Number of milliseconds to wait. Defaults to 500
-- `val`: Usually debounced properties are one way, if you plan to manually update val, this will keep val and value in sync. Defaults to false.
+- `sync`: Usually debounced properties are one way, if you plan to manually update val, this will keep val and value in sync. Defaults to false.
 - `type`: The type input
 - `inputClass`: The class for the input in the container
 - `horizontal`: Direction loader, when true(left to right), when false(bottom to top). Default: true
